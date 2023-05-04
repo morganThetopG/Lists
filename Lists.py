@@ -31,34 +31,48 @@ def diner():
 def orders():
   global total
   global list
-  order = input("Make An Order: ").lower()
+  print("Your Order Is "+str(list))
+  
+  order = input("Make An Order Or Type Remove To Remove An Item: ").lower()
+  
+  if order == "remove":
+    list.remove("What Would You Like To Remove? "+input(str(list))
+  
   if order == "burger" or order == "amonjus sus" or order == "griddy":
     total += 4
     list.append(order)
     #exit conditnal
+    
     exit = input("Is that all Y/N: ").lower()
     if exit == "y":
       print("Your total is " + str(total) + " And You Ordered" + str(list))
+      
     else:
       print("You've Ordered " + str(list) + " So Far")
       orders()
+      
     #sides
   elif order == "ches_quick" or order == "feetpics" or order == "men!?!?!?":
     total += 2
     list.append(order)
     #exit conditnal
     exit = input("Is that all Y/N: ").lower()
+    
     if exit == "y":
       print("Your total is " + str(total) + " And You Ordered" + str(list))
+      
     else:
       print("You've Ordered " + str(list) + " So Far")
       orders()
   #drinks
   elif order == "gamerbathwater" or order == "choccy milk" or order == "hairy soup":
+    
     total += 69.42
     list.append(order)
     #exit conditnal
+    
     exit = input("Is that all Y/N: ").lower()
+    
     if exit == "y":
       print("Your total is " + str(total) + " And You Ordered" + str(list))
     else:
