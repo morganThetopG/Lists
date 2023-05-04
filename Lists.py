@@ -16,6 +16,15 @@ menu = {
 }
 list = []
 
+def Remove(item):
+  global list
+  if item in list:
+    list.remove(item)
+    orders()
+
+  else:
+    print("Uhhh You Didn't Order That")
+    orders()
 
 #The Diner
 def diner():
@@ -36,7 +45,7 @@ def orders():
   order = input("Make An Order Or Type Remove To Remove An Item: ").lower()
   
   if order == "remove":
-    list.remove(input("What Would You Like To Remove? "+str(list)+" "))
+    Remove(input("What Would You Like To Remove? "+str(list)+" "))
   
   elif order == "burger" or order == "amonjus sus" or order == "griddy":
     total += 4
